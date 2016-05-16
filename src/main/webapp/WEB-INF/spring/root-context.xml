@@ -19,9 +19,4 @@
 			<property name="rootPath" value="/home/dev"/>
 		</bean>
 	</beans>
-	<beans profile="production">   
-		<bean id="ProfileTestBean" class="kr.ksh.study.chapterThree.profile.ProfileTestBean">
-			<property name="rootPath" value="/home/release"/>
-		</bean>
-	</beans>
 </beans>

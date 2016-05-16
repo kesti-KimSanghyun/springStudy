@@ -24,20 +24,11 @@ public class ProfileController {
 	 */
 	@RequestMapping("/profile")
 	public void profile(Model model){
-		logger.debug(profileTestBean.getRootPath());
-		model.addAttribute("currentProfile", currentProfile());
-		model.addAttribute("rootPath", profileTestBean.getRootPath());
-	}
-	
-	/**
-	 * 현재 프로파일 가져오기
-	 * @return
-	 */
-	private String currentProfile(){
 		String[] profiles = subContext.getEnvironment().getActiveProfiles();
 		if( profiles.length==0 ){
 			profiles = subContext.getEnvironment().getDefaultProfiles();
 		}
-		return profiles[0];
+		model.addAttribute("currentProfile", profiles[0]);
+		model.addAttribute("rootPath", profileTestBean.getRootPath());
 	}
 }
