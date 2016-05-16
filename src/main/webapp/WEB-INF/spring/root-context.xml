@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	
+
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	
-	<beans profile="local">   
+
+	<beans profile="local">
 		<bean id="ProfileTestBean" class="kr.ksh.study.chapterThree.profile.ProfileTestBean">
-			<property name="rootPath" value="C:/home/profile"/>
+			<property name="rootPath" value="C:/home/profile" />
 		</bean>
 	</beans>
-	<beans profile="dev">   
+	<beans profile="dev">
 		<bean id="ProfileTestBean" class="kr.ksh.study.chapterThree.profile.ProfileTestBean">
-			<property name="rootPath" value="/home/dev"/>
+			<property name="rootPath" value="/home/dev" />
 		</bean>
 	</beans>
+
 </beans>
