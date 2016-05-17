@@ -1,6 +1,5 @@
 package kr.ksh.study.chapterThree.runTime;
 
-import org.springframework.beans.factory.annotation.Value;
 
 public class ExpressiveConfig {
 	private String title;		
